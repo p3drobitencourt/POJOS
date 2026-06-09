@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "br.edu.ifsuldeminas.mch.sd.protobuf";
+option java_outer_classname = "PersonProto";
+
+message AddressMessage {
+  string patio = 1;
+  int32 number = 2;
+  string neighborhood = 3;
+  string zip_code = 4;
+  string city = 5;
+  string state = 6;
+}
+
+message PersonMessage {
+  string name = 1;
+  string cpf = 2;
+  int64 birth_day = 3;
+  AddressMessage address = 4;
+}

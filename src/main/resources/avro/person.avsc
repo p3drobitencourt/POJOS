@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "PersonRecord",
+  "namespace": "br.edu.ifsuldeminas.mch.sd.avro",
+  "fields": [
+    { "name": "name", "type": "string" },
+    { "name": "cpf", "type": "string" },
+    { "name": "birthDay", "type": "long" },
+    {
+      "name": "address",
+      "type": {
+        "type": "record",
+        "name": "AddressRecord",
+        "fields": [
+          { "name": "patio", "type": "string" },
+          { "name": "number", "type": "int" },
+          { "name": "neighborhood", "type": "string" },
+          { "name": "zipCode", "type": "string" },
+          { "name": "city", "type": "string" },
+          { "name": "state", "type": "string" }
+        ]
+      }
+    }
+  ]
+}
